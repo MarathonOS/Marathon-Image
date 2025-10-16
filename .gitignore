@@ -1,0 +1,60 @@
+# Marathon OS .gitignore
+
+# Build outputs
+out/
+*.img
+*.zip
+*.tar.gz
+*.tar.xz
+
+# Temporary build files
+*.o
+*.ko
+*.mod
+*.mod.c
+*.a
+*.so
+*.so.*
+.tmp_versions/
+modules.order
+Module.symvers
+*.dwo
+
+# Alpine/pmbootstrap
+.abuild/
+*.apk
+*.APKINDEX.tar.gz
+
+# Kernel build artifacts
+.config.old
+.version
+vmlinux
+System.map
+*.dtb
+*.dtbo
+
+# Editor files
+*.swp
+*.swo
+*~
+.*.swp
+.*.swo
+.vscode/
+.idea/
+*.sublime-*
+.DS_Store
+
+# Logs
+*.log
+*.log.*
+
+# Cached files
+__pycache__/
+*.pyc
+*.pyo
+.cache/
+
+# Plan files (optional - uncomment if you don't want to track plans)
+# *.plan.md
+
+
