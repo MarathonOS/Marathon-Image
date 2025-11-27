@@ -55,6 +55,7 @@ ls -la packages/marathon-shell/APKBUILD
 ls -la packages/linux-marathon/APKBUILD
 ls -la devices/enchilada/device.conf
 ls -la configs/sysctl.d/99-marathon.conf
+ls -la scripts/complete-build.sh
 ls -la scripts/sync-and-build-marathon.sh
 ```
 
