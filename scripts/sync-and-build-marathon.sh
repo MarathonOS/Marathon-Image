@@ -27,10 +27,11 @@ echo ""
 
 if [ ! -d "$MARATHON_SHELL_DIR" ]; then
     echo "❌ Marathon Shell directory not found: $MARATHON_SHELL_DIR"
+    echo "   Creating $MARATHON_SHELL_DIR"
+    mkdir -p "$MARATHON_SHELL_DIR"
+    cd "$MARATHON_SHELL_DIR"
     echo "   Cloning from $GIT_REPO branch $GIT_BRANCH..."
-    mkdir -p "$(dirname "$MARATHON_SHELL_DIR")"
-    cd "$(dirname "$MARATHON_SHELL_DIR")"
-    git clone --branch "$GIT_BRANCH" "$GIT_REPO"
+    git clone --branch "$GIT_BRANCH" "$GIT_REPO" "$MARATHON_SHELL_DIR"
 else
     cd "$MARATHON_SHELL_DIR"
     echo "📥 Pulling latest changes from $GIT_REPO branch $GIT_BRANCH..."
