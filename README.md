@@ -43,6 +43,9 @@ cd Marathon-Image
 pmbootstrap init
 # Select: edge, oneplus-enchilada, systemd, none
 
+# Create build directory if it does not exist
+mkdir -p build/marathon-shell-source
+
 # Build and create images
 # Build and create images (default: oneplus-enchilada)
 ./scripts/sync-and-build-marathon.sh

@@ -27,14 +27,15 @@ echo ""
 
 if [ ! -d "$MARATHON_SHELL_DIR" ]; then
     echo "❌ Marathon Shell directory not found: $MARATHON_SHELL_DIR"
-    echo "   Cloning from GitHub..."
-    cd "$(dirname "$MARATHON_SHELL_DIR")"
-    git clone https://github.com/MarathonOS/Marathon-Shell.git
+    echo "   Creating $MARATHON_SHELL_DIR"
+    mkdir -p "$MARATHON_SHELL_DIR"
     cd "$MARATHON_SHELL_DIR"
+    echo "   Cloning from $GIT_REPO branch $GIT_BRANCH..."
+    git clone --branch "$GIT_BRANCH" "$GIT_REPO" "$MARATHON_SHELL_DIR"
 else
     cd "$MARATHON_SHELL_DIR"
-    echo "📥 Pulling latest changes from GitHub..."
-    
+    echo "📥 Pulling latest changes from $GIT_REPO branch $GIT_BRANCH..."
+
     # Stash any local changes
     if ! git diff-index --quiet HEAD --; then
         echo "⚠️  Local changes detected, stashing..."
@@ -43,8 +44,9 @@ else
     
     # Pull latest
     git fetch origin
-    git pull origin main || git pull origin master
-    
+    git checkout "$GIT_BRANCH"
+    git pull origin "$GIT_BRANCH"
+
     echo "✅ Marathon Shell synced to latest commit:"
     git log -1 --oneline
 fi
