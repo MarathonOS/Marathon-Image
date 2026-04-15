@@ -36,7 +36,7 @@ A modern mobile Linux distribution combining PostmarketOS with a custom Qt6/QML 
 
 ```bash
 # Clone repository
-git clone https://github.com/patrickjquinn/Marathon-Image.git
+git clone https://github.com/MarathonOS/Marathon-Image.git
 cd Marathon-Image
 
 # Initialize pmbootstrap (first time only)
@@ -59,7 +59,7 @@ pmbootstrap init
 ### Flashing
 
 ```bash
-# Boot device into fastboot mode (Power + Vol Down)
+# Boot device into fastboot mode (Power + Vol Up)
 fastboot flash boot out/oneplus-enchilada/boot-MARATHON-LATEST.img
 fastboot flash userdata out/oneplus-enchilada/oneplus-enchilada-MARATHON-LATEST.img
 fastboot reboot
