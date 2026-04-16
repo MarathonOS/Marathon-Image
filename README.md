@@ -41,7 +41,7 @@ cd Marathon-Image
 
 # Initialize pmbootstrap (first time only)
 pmbootstrap init
-# Select: edge, oneplus-enchilada, systemd, none
+# Select: edge, oneplus / enchilada, pipewire, none, systemd
 
 # IMPORTANT: run the build script from an interactive terminal.
 # pmbootstrap uses sudo during the build; you'll be prompted once and then it will be cached.
