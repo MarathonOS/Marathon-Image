@@ -1,3 +1,21 @@
+> [!IMPORTANT]
+> **This repository has moved and is archived.**
+>
+> Marathon-Image was merged into
+> [**patrickjquinn/Marathon-Shell**](https://github.com/patrickjquinn/Marathon-Shell)
+> on 2026-08-31 and now lives there as
+> [`packaging/`](https://github.com/patrickjquinn/Marathon-Shell/tree/ux-overhaul/packaging).
+> All 163 commits of history came across with it.
+>
+> The two repos were never independent — 95% of this repo's active days
+> carried a Marathon-Shell commit the same day — so a change spanning the
+> shell and its packaging could never be one atomic commit. New work goes
+> to Marathon-Shell; see
+> [`docs/MONOREPO_MIGRATION.md`](https://github.com/patrickjquinn/Marathon-Shell/blob/ux-overhaul/docs/MONOREPO_MIGRATION.md).
+>
+> This repo stays readable at tag `pre-monorepo-image`. Nothing here is
+> maintained.
+
 # Marathon OS
 
 A modern mobile Linux distribution combining PostmarketOS with a custom Qt6/QML Wayland compositor, inspired by BlackBerry 10's gesture-based interface.
